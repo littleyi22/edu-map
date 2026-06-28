@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>教室外的地圖：從在地文化出發，引導學生用 AI 解碼家鄉</title>
+  <meta name="description" content="教室外的地圖：從在地文化出發，引導學生用 AI 解碼家鄉，包含學生作品與教學反思。">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="glass-header">
+    <div class="header-content">
+      <h1>教室外的地圖──<br><span style="-webkit-text-fill-color: white; color: white; background: none;">從在地文化出發，引導學生用 AI 解碼家鄉</span></h1>
+      <p>分享者 蕭奕鈞老師</p>
+    </div>
+  </header>
+
+  <!-- Modal Lightbox -->
+  <div class="modal-overlay" id="lightbox-modal">
+    <div class="modal-content">
+      <button class="modal-close" id="btn-close-modal">×</button>
+      <div class="modal-body" id="modal-body">
+        <!-- Dynamically injected iframe or img -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Content Container -->
+  <main class="container">
+    
+    <!-- Section 0: 自我介紹 -->
+    <section class="glass-card scroll-reveal">
+      <h2>自我介紹</h2>
+      <div style="margin-bottom: 2rem; border-radius: 12px; overflow: hidden; box-shadow: var(--shadow);">
+        <img src="./assets/臉書.png" alt="臉書封面" style="width: 100%; height: auto; display: block;">
+      </div>
+      <div style="display: flex; flex-wrap: wrap; gap: 2rem; align-items: center;">
+        <img src="./assets/大頭照.jpg" alt="奕鈞老師" style="width: 180px; height: 180px; border-radius: 50%; object-fit: cover; border: 4px solid var(--primary-color);">
+        <div style="flex: 1; min-width: 300px;">
+          <p style="font-size: 1.2rem; margin-bottom: 0.5rem;"><span class="highlight">✅講師</span>：奕鈞老師</p>
+          <p style="font-size: 1.05rem; line-height: 1.8; color: var(--text-light);"><span class="highlight">✅【個人簡介】</span> 不務正業的國中國文教師，致力於推廣數位學習。擅長捕捉教育現場的「真實痛點」，利用 Gemini、Google Apps Script (GAS)與 Canvas技術，將行政繁瑣與教學需求轉化為高效的數位工具。主張「想像力即程式碼」，利用Vibe Coding帶領師生即使不精通程式語法，也能用 AI 打造專屬的教學神器。</p>
+          <div class="btn-group" style="margin-top: 1rem;">
+            <button class="btn" onclick="openModal('youtube', 'https://youtube.com/shorts/M1dohlKcPLU?feature=share')">🎬 觀看自我介紹</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 1: 教學過程 -->
+    <section class="glass-card scroll-reveal">
+      <h2>一、教學過程與方法：從零到一的專題實作</h2>
+      <div style="display: flex; flex-wrap: wrap; gap: 2rem; align-items: flex-start;">
+        <div style="flex: 1; min-width: 300px;">
+          <ul>
+            <li><span class="highlight">說明專題格式</span>：建立清晰框架，讓學生了解專題研究的基本架構與預期產出。
+              <button class="btn" onclick="openModal('pdf', '../資料/中藥行目錄.pdf')">📄 查看專題目錄</button>
+            </li>
+            <li><span class="highlight">典範學習與九宮格記錄</span>：引導學生閱讀學長姊報告，萃取成功經驗。
+              <button class="btn" onclick="openModal('pdf', '../1150310交趾陶九宮格.pdf')">📄 查看九宮格範例</button>
+            </li>
+            <li><span class="highlight">學生分組與任務分工</span>：引導小組成員分配角色與職責。 
+              <button class="btn" onclick="openModal('pdf', '../任務分工表.pdf')">📄 查看任務分工表</button>
+            </li>
+            <li><span class="highlight">尋找題目與發想</span>：填寫主題創意構想圖。 
+              <button class="btn" onclick="openModal('pdf', '../1150114主題構想成果.pdf')">💡 查看學生構想圖</button>
+            </li>
+            <li><span class="highlight">研究實踐四部曲</span>：查詢資料 ➔ 製作問卷 ➔ 編寫投影片 ➔ 上台發表。
+              <div class="btn-group">
+                <button class="btn" onclick="openModal('youtube', 'https://www.youtube.com/embed/eu17-KCzZuA')">🎬 教學流程簡介</button>
+                <button class="btn" onclick="openModal('youtube', 'https://youtu.be/XCUQyX7RHzc')">🎬 專題發表會</button>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div style="flex: 1; min-width: 300px;">
+          <img src="./assets/教學過程與方法.jpg" alt="教學過程與方法" style="width: 100%; height: auto; border-radius: 12px; box-shadow: var(--shadow);">
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 2: 第一階段 -->
+    <section class="glass-card scroll-reveal">
+      <h2>二、第一階段：從「心」出發</h2>
+      <p class="subtitle">學生興趣導向專題：將生活中的「玩樂與好奇」轉化為嚴謹的探究過程。</p>
+      <div style="display: flex; flex-wrap: wrap; gap: 2rem; align-items: flex-start;">
+        <div style="flex: 1; min-width: 300px;">
+          <ul>
+            <li><span class="highlight">外送平臺實測</span>：觀察保溫、衛生並訪談外送員。
+              <div class="btn-group">
+                <button class="btn" onclick="openModal('pdf', '../資料/209-5報告 一鍵填飽你的胃new.pdf')">📄 查看外送專題</button>
+              </div>
+            </li>
+            <li><span class="highlight">國中生 App 偏好調查</span>：IG、YouTube 與 FB 的使用迷思。
+              <div class="btn-group">
+                <button class="btn" onclick="openModal('pdf', '../資料/國中生最常用的APP.pdf')">📄 查看 App 調查專題</button>
+              </div>
+            </li>
+            <li><span class="highlight">串流媒體大數據</span>：Netflix 崛起的原因與演算法探討。
+              <div class="btn-group">
+                <button class="btn" onclick="openModal('pdf', '../資料/Netflix的生存之道.pdf')">📄 查看 Netflix 專題</button>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div style="flex: 1; min-width: 300px;">
+          <img src="./assets/圖片1.png" alt="第一階段照片" style="width: 100%; height: auto; border-radius: 12px; box-shadow: var(--shadow);">
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 3: 第二階段 -->
+    <section class="glass-card scroll-reveal">
+      <h2>三、第二階段：走入社區</h2>
+      <p class="subtitle">在地文化探究：培養學生對本土文化的認同與社會責任感。</p>
+      <div style="display: flex; flex-wrap: wrap; gap: 2rem; align-items: flex-start;">
+        <div style="flex: 1; min-width: 300px;">
+          <ul>
+            <li><span class="highlight">疫情下的文化路</span>：與攤商及市府主管訪談，看見疫情下的兩難。
+              <div class="btn-group">
+                <button class="btn" onclick="openModal('pdf', '../資料/新冠肺炎下的文化路夜市.pdf')">📄 查看文化路專題</button>
+              </div>
+            </li>
+            <li><span class="highlight">林聰明沙鍋魚頭</span>：傳統餐飲的轉型陣痛與二代經營的創新理念。
+              <div class="btn-group">
+                <button class="btn" onclick="openModal('pdf', '../資料/1100422林聰明砂鍋魚頭與地方創生.pdf')">📄 查看林聰明專題</button>
+              </div>
+            </li>
+            <li><span class="highlight">奧利塔高科技倉儲</span>：從傳統市場賣豬油轉型為現代化自動倉儲的震撼體驗。
+              <div class="btn-group">
+                <button class="btn" onclick="openModal('pdf', '../資料/1110511奧莉塔橄欖油簡報.pdf')">📄 查看奧利塔專題</button>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div style="flex: 1; min-width: 300px;">
+          <img src="./assets/IMG_6588.jpg" alt="第二階段照片" style="width: 100%; height: auto; border-radius: 12px; box-shadow: var(--shadow);">
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 4: 第三階段 -->
+    <section class="glass-card scroll-reveal">
+      <h2>四、第三階段：擁抱未來</h2>
+      <p class="subtitle">數位學習與 AI 應用：因應 AI 時代，專題研究的全面數位轉型。</p>
+      <div style="display: flex; flex-wrap: wrap; gap: 2rem; align-items: flex-start;">
+        <div style="flex: 1; min-width: 300px;">
+          <ul>
+            <li><span class="highlight">生成式 AI 實戰</span>：使用 Sora 生成諸羅樹蛙影片、Suno 製作交趾陶 MV。
+              <div class="btn-group">
+                <button class="btn" onclick="openModal('pdf', '../資料/簡報 樹蛙之鄉．古厝之根：走入新店社區的生態與文化之旅.pdf')">🐸 樹蛙簡報</button>
+                <button class="btn" onclick="openModal('youtube', 'https://www.youtube.com/embed/8QXVaivQ1fo?si=JQdHubpvhpw44Uyc')">🎬 樹蛙影片</button>
+                <button class="btn" onclick="openModal('pdf', '../資料/簡報檔 交趾陶專題研究 (1).pdf')">🏺 交趾陶簡報</button>
+                <button class="btn" onclick="openModal('youtube', 'https://www.youtube.com/embed/0zSYAlaCddI?si=2PTNMBvutQ_mRM5Z')">🎬 交趾陶 MV</button>
+              </div>
+            </li>
+            <li><span class="highlight">跨域資訊整合</span>：AI 選書機器人、日治戶籍謄本的互動網頁大挑戰。
+              <div class="btn-group">
+                <button class="btn" onclick="openModal('pdf', '../資料/02簡報 要讀又要玩？探討數位遊戲化對國中生閱讀動機之影響.pdf')">📄 數位閱讀專題</button>
+                <button class="btn" onclick="openModal('pdf', '../資料/02簡報嘉義國中專題競賽-時光偵探的數位解密：結合訪談與數位工具探究日治生活.pdf')">📄 時光偵探專題</button>
+              </div>
+            </li>
+            <li><span class="highlight">AI 輔助工具導入</span>：利用 LLM 自動生成長者訪談的逐字摘要。</li>
+          </ul>
+        </div>
+        <div style="flex: 1; min-width: 300px;">
+          <img src="./assets/交趾陶.jpg" alt="第三階段照片" style="width: 100%; height: auto; border-radius: 12px; box-shadow: var(--shadow);">
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 5: 投稿作品 -->
+    <section class="glass-card scroll-reveal">
+      <h2>五、投稿作品</h2>
+      <div class="photo-grid">
+        
+        <div class="photo-item" onclick="openModal('pdf', '../資料/從運將故事中汲取人生智慧──看書追劇做專題｜翻轉教育.pdf')">
+          <div class="submission-card">
+            <h4>📄 翻轉教育投稿</h4>
+            <p>從運將故事中汲取人生智慧</p>
+          </div>
+        </div>
+
+        <div class="photo-item" onclick="openModal('pdf', '../資料/素養導向學習！學生走出教室學企業經營做學習歷程｜翻轉教育.pdf')">
+          <div class="submission-card">
+            <h4>📄 翻轉教育投稿</h4>
+            <p>素養導向學習</p>
+          </div>
+        </div>
+
+        <div class="photo-item" onclick="openModal('image', './assets/1110623國語日報.jpg')">
+          <img src="./assets/1110623國語日報.jpg" alt="國語日報" loading="lazy">
+        </div>
+
+        <div class="photo-item" onclick="openModal('image', './assets/113.2.16國語日報(高畫質).jpg')">
+          <img src="./assets/113.2.16國語日報(高畫質).jpg" alt="國語日報(高畫質)" loading="lazy">
+        </div>
+
+        <div class="photo-item" onclick="openModal('image', './assets/1130815_國語日報_方塊酥.jpg')">
+          <img src="./assets/1130815_國語日報_方塊酥.jpg" alt="國語日報方塊酥" loading="lazy">
+        </div>
+
+        <div class="photo-item" onclick="openModal('image', './assets/1140709中學生報紙掃描檔.jpg')">
+          <img src="./assets/1140709中學生報紙掃描檔.jpg" alt="中學生報紙掃描檔" loading="lazy">
+        </div>
+
+        <div class="photo-item" onclick="openModal('image', './assets/1140724國語日報樂學版刊登電子檔.JPG')">
+          <img src="./assets/1140724國語日報樂學版刊登電子檔.JPG" alt="國語日報樂學版" loading="lazy">
+        </div>
+
+        <div class="photo-item" onclick="openModal('image', './assets/國語日報原版.jpg')">
+          <img src="./assets/國語日報原版.jpg" alt="國語日報原版" loading="lazy">
+        </div>
+
+        <div class="photo-item" onclick="openModal('image', './assets/國語日報電子檔.jpg')">
+          <img src="./assets/國語日報電子檔.jpg" alt="國語日報電子檔" loading="lazy">
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 6: 反思 -->
+    <section class="glass-card scroll-reveal">
+      <h2>六、反思與展望：教學現場的真實回饋</h2>
+      <div style="display: flex; flex-wrap: wrap; gap: 2rem; align-items: flex-start;">
+        <div style="flex: 1; min-width: 300px;">
+          <ul>
+            <li><span class="highlight">生生用平板的真實數據</span>：學生喜愛數位學習，但為何老師在課堂上仍偏好傳統教具？（備課成本高、行政耗時、進度壓力）。</li>
+            <li><span class="highlight">AI 時代的教師角色</span>：從知識的傳授者，轉變為協助學生運用 AI 解決問題的引導者。
+              <div class="btn-group">
+                <button class="btn" onclick="openModal('pdf', '../資料/02簡報 當粉筆遇上觸控螢幕—探討嘉義國中師生數位學習意願之研究.pdf')">📄 觀看研究簡報</button>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div style="flex: 1; min-width: 300px;">
+          <img src="./assets/奕鈞老師上課.png" alt="奕鈞老師上課" style="width: 100%; height: auto; border-radius: 12px; box-shadow: var(--shadow);">
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer scroll-reveal">
+      <h1>謝謝聆聽</h1>
+      <p>專題研究讓教室沒有界線，讓學習真正發生。</p>
+      <div class="copyright">© 2026 奕鈞老師 版權所有 | 版本：v.2.0</div>
+    </footer>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
