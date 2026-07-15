@@ -85,4 +85,13 @@ document.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('.scroll-reveal').forEach(el => {
     observer.observe(el);
   });
+
+  // Timeline accordion logic
+  const timelineItems = document.querySelectorAll('.timeline-item');
+  timelineItems.forEach(item => {
+    const content = item.querySelector('.timeline-content');
+    content.addEventListener('click', () => {
+      item.classList.toggle('active');
+    });
+  });
 });
